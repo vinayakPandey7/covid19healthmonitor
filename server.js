@@ -4,24 +4,29 @@ const bodyParser = require("body-parser");
 // provides Express middleware to enable CORS with various options
 const cors = require("cors");
 const path= require('path');
+const dotenv = require('dotenv');
+
+dotenv.config({path: './config.env'})
+const DB = process.env.DATABASE;
+const PORT =  process.env.PORT || 5000;
 
 const healthcareRoute = require('./routes/healthcare')
 // define Global Variable
 const app = express();
-const PORT = process.env.PORT || 8080; 
+// const PORT = process.env.PORT || 8080; 
 
 
-var corsOptions = {
-  origin: "http://http://192.168.29.143:8080"
-};
+var corsOptions = {origin: "http://http://192.168.29.143:8080"};
 
 app.use(cors());
 
 const db = require("./models");
 db.mongoose
-  .connect(db.url, {
+  .connect(DB, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    // useCreateIndex: true,
+    // useFindAndModify: false
   })
   .then(() => {
     console.log("Connected to the database!");
@@ -36,6 +41,12 @@ app.use(bodyParser.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
+
+
+// const middleware = (req,res, next) => {
+//   console.log('hit middleware');
+//   next();
+// }
 
 // simple route
 app.get("/", (req, res) => {
