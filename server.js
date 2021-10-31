@@ -49,10 +49,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // }
 
 // simple route
-app.get("/", (req, res) => {
-  res.json({ message: "sucess:true" });
-})
-app.use('/api/',healthcareRoute);
+// app.get("/", (req, res) => {
+//   res.json({ message: "sucess:true" });
+// })
+// app.use('/api/',healthcareRoute);
 
 
 if (process.env.NODE_ENV === 'production') {
