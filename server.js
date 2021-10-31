@@ -52,7 +52,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.get("/", (req, res) => {
 //   res.json({ message: "sucess:true" });
 // })
-// app.use('/api/',healthcareRoute);
+
 
 
 if (process.env.NODE_ENV === 'production') {
@@ -62,7 +62,7 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.join(__dirname,'client','build','index.html'))
   })
 }
-
+app.use('/api/',healthcareRoute);
 // app.post('/get-data', urlencodedParser, function (req, res) {  
 //    // Prepare output in JSON format  
 //    let temp = Math.floor((Math.random() * 100) + 1);
