@@ -26,7 +26,7 @@ exports.addPost = async (req,res) => {
 
 // Find a single Tutorial with an id
 exports.findAll = async (req,res) => {
-   
+   console.log('m inside findall')
    try {
      const healthData = await Userhealths.find();
 
@@ -48,7 +48,6 @@ exports.findAll = async (req,res) => {
 exports.findLatest = async (req,res) => {
    
    try {
-    console.log('me1');
     let dumTemp = Math.floor((Math.random() * 100) + 1);
     let dumspo2 = Math.floor((Math.random() * 100) + 1);
     let dumbp = Math.floor((Math.random() * 100) + 1);
@@ -68,7 +67,8 @@ exports.findLatest = async (req,res) => {
     //   chart2:{name:'spo2',xAxis:tempData.date ,data:tempData.date,healthy:tempData.healthy,title:tempData.title,remark:tempData.remark},
     //   chart3:{name:'bp',xAxis:tempData.date ,data:tempData.date,healthy:tempData.healthy,title:tempData.title,remark:tempData.remark}
     //  }
-res.send({hell:true,dataSaved:savedPost,LatestData:healthData});
+    console.log('inside find-latest, data inserted and feteched successfuly')
+    res.send({hell:true,dataSaved:savedPost,LatestData:healthData});
     //  tempData.map((item,index) => {
     //   healthData['chart1'].data.push(item.temperature);
     //   healthData['chart1'].xAxis.push(item.date);

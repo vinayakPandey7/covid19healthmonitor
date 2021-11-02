@@ -1,24 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, {useState, useEffect} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Header from './components/Header'
+import Dashboard from './components/Dashboard'
+// import { TodoItem } from './myComponent/TodoItem';
+// import {aboutText} from './constants'
+
+import {logoName} from './constant';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React and anything
-        </a>
-      </header>
-    </div>
+    <div className="container-fluid">
+   <Router>
+      <Header title={logoName} searchBar={true} />
+      heklo
+      <Switch >
+
+
+          <Route exact path="/" render={()=> {
+            return(
+            <>
+            <Dashboard  />
+            </>)
+          }} />
+
+
+          {/* <Route exact path="/" render={()=> {
+            return(
+            <>
+            <AddTodo addTodo={addTodo} />
+            <Todos todoList={todoList} onDelete={onDelete} />
+            </>)
+          }} />
+
+          <Route exact path="/about" render={()=> {
+            return(
+              <>
+                <About aboutText={aboutText} />
+              </>
+            )
+          }} /> */}
+
+
+      </Switch>
+
+      {/* <Footer /> */}
+   </Router>
+    
+   </div>
+
   );
 }
 

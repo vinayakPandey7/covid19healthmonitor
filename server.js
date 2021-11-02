@@ -13,6 +13,7 @@ const PORT =  process.env.PORT || 5000;
 const healthcareRoute = require('./routes/healthcare')
 // define Global Variable
 const app = express();
+app.use(express.json())
 // const PORT = process.env.PORT || 8080; 
 
 
@@ -52,8 +53,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.get("/", (req, res) => {
 //   res.json({ message: "sucess:true" });
 // })
-
-
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-origin", "*")
+  res.setHeader('Access-Control-Allow-Methods', "GET,POST,OPTIONS")
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+  next();
+})
+app.use('/api/',healthcareRoute);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static( 'client/build'));
@@ -61,8 +67,12 @@ if (process.env.NODE_ENV === 'production') {
   app.get('*',(req,res) => {
     res.sendFile(path.join(__dirname,'client','build','index.html'))
   })
+} else {
+  app.get('/',(req,res) => {
+    res.send('App Running')
+  })
 }
-app.use('/api/',healthcareRoute);
+
 // app.post('/get-data', urlencodedParser, function (req, res) {  
 //    // Prepare output in JSON format  
 //    let temp = Math.floor((Math.random() * 100) + 1);
