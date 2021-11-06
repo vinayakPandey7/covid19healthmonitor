@@ -29,9 +29,9 @@ export default class Dashboard extends Component {
   }
 
   componentDidMount() {
-      // this.retrieveTutorials();
+      this.retrieveTutorials();
 
-      // setInterval(this.fetchLatestData, 3000);
+      setInterval(this.fetchLatestData, 3000);
   }
 
 
