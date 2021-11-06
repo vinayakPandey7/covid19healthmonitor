@@ -7,7 +7,7 @@ exports.addPost = async (req,res) => {
      const {temperature, bp, spo2, title, remark } = req.body;
 
      try {
-
+        
        const newHealthcare = new Userhealths({temperature,bp, spo2, title, remark });
        const savedPost = await newHealthcare.save();
        if (!savedPost) throw Error('Something went wrong saving the user');

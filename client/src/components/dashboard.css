@@ -1,0 +1,41 @@
+.patient-div{
+      text-align: center;
+}
+
+
+
+.param-value{
+    font-size: 45px;
+    display: inline;
+    padding-left: 21px
+}
+
+
+
+.param-text-img {
+    display: inline;
+
+}
+
+.param-img {
+    margin-left: 15px;
+}
+
+#profile-img {
+    width:200px;
+    border-radius: 50%;
+  }
+
+  
+.patient-detail {
+    align-items: center;
+}
+
+.patient-btn {
+    display: inline;
+    padding: 5px;
+}
+
+.contact-btn {
+    margin-left: 5px;
+}

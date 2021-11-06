@@ -17,8 +17,8 @@ function App() {
   return (
     <div className="container-fluid">
    <Router>
-      <Header title={logoName} searchBar={true} />
-      heklo
+      <Header title={logoName} searchBar={false} />
+      inside appjs 
       <Switch >
 
 
