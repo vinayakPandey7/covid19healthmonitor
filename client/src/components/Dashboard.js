@@ -31,7 +31,7 @@ export default class Dashboard extends Component {
   componentDidMount() {
       this.retrieveTutorials();
 
-      setInterval(this.fetchLatestData, 3000);
+      this.countDownInterval =  setInterval(this.fetchLatestData, 3000);
   }
 
 
@@ -148,7 +148,7 @@ export default class Dashboard extends Component {
     
                     // set up the updating of the chart each second
                     var series = this.series[0];
-                    setInterval(function () {
+                    that.countDownIntervalTemp =    setInterval(function () {
                         // var x = (new Date()).getTime(), // current time
                         //     y = Math.round(Math.random() * 100);
                         console.log(series)
@@ -162,7 +162,7 @@ export default class Dashboard extends Component {
                         //   }
                         // }))
                         
-                        series.addPoint(that.state.tempTemp, true, true);
+                         series.addPoint(that.state.tempTemp, true, true);
                     }, 4000);
                     console.log(series)
                 }
@@ -246,7 +246,7 @@ export default class Dashboard extends Component {
   
                   // set up the updating of the chart each second
                   var series = this.series[0];
-                  setInterval(function () {
+                  that.countDownIntervalSpo2=   setInterval(function () {
                       // var x = (new Date()).getTime(), // current time
                       //     y = Math.round(Math.random() * 100);
                       series.addPoint(that.state.tempSpo2, true, true);
@@ -329,10 +329,10 @@ export default class Dashboard extends Component {
   
                   // set up the updating of the chart each second
                   var series = this.series[0];
-                  setInterval(function () {
+                  that.countDownIntervalBp= setInterval(function () {
                       // var x = (new Date()).getTime(), // current time
                       //     y = Math.round(Math.random() * 100);
-                      series.addPoint(that.state.tempBp, true, true);
+                       series.addPoint(that.state.tempBp, true, true);
                   }, 4000);
                   // console.log(that.state.tempSeries)
               }
@@ -402,6 +402,15 @@ export default class Dashboard extends Component {
       });
       }
   
+
+      componentWillUnmount() {
+        // clearing set interval
+        console.log('inside component will mount')
+        clearInterval(this.countDownInterval);
+         clearInterval(this.countDownIntervalTemp)
+         clearInterval(this.countDownIntervalSpo2)
+        clearInterval(this.countDownIntervalBp)
+      };
 
   render() {
     // const { searchTitle, tutorials, currentTutorial, currentIndex } = this.state;

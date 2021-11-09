@@ -1,20 +1,21 @@
 import http from "../http-common";
 
 const getAll = () => {
-  return http.get("/find");
+  return http.get("/data/find");
 };
 
 const getLatest = () => {
-    return http.get("/latest-data");
+    return http.get("/data/latest-data");
 };
 
 const get = id => {
   return http.get(`/tutorials/${id}`);
 };
 
-const create = data => {
-  return http.post("/tutorials", data);
-};
+// const createUser = data => {
+//   console.log(data)
+//   return http.post("/auth/signup", data);
+// };
 
 const update = (id, data) => {
   return http.put(`/tutorials/${id}`, data);
@@ -35,7 +36,7 @@ const findByTitle = title => {
 export default {
   getAll,
   get,
-  create,
+  // createUser,
   update,
   remove,
   removeAll,

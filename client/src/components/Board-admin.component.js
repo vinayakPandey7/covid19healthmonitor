@@ -1,0 +1,44 @@
+import React, { Component } from "react";
+import UserService from "../services/User.service";
+
+export default class BoardAdmin extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      content: ""
+    };
+  }
+
+  componentDidMount() {
+    UserService.getModeratorBoard().then(
+      response => {
+          console.log("inside BoardAdmin response",response.data)
+        this.setState({
+          content: response.data
+        });
+      },
+      error => {
+        this.setState({
+          content:
+            (error.response &&
+              error.response.data &&
+              error.response.data.message) ||
+            error.message ||
+            error.toString()
+        });
+      }
+    );
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <header className="jumbotron">
+            <h1>inside BoardAdmin component</h1>
+          <h3>{this.state.content}</h3>
+        </header>
+      </div>
+    );
+  }
+}

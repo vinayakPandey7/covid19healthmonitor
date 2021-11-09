@@ -1,12 +1,14 @@
 const express = require("express");
 //helps to parse the request and create the req.body object
 const bodyParser = require("body-parser");
+const dotenv = require('dotenv');
+dotenv.config({path: './config.env'})
 // provides Express middleware to enable CORS with various options
 const cors = require("cors");
 const path= require('path');
-const dotenv = require('dotenv');
 
-dotenv.config({path: './config.env'})
+const authRoutes = require('./routes/auth');
+
 const DB = process.env.DATABASE;
 const PORT =  process.env.PORT || 5000;
 
@@ -19,7 +21,7 @@ app.use(express.json())
 
 var corsOptions = {origin: "http://http://192.168.29.143:8080"};
 
-app.use(cors());
+
 
 const db = require("./models");
 db.mongoose
@@ -39,6 +41,8 @@ db.mongoose
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
+app.use(cors());
+
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -59,7 +63,8 @@ app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
   next();
 })
-app.use('/api/',healthcareRoute);
+app.use('/api/auth', authRoutes);
+app.use('/api/data/',healthcareRoute);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static( 'client/build'));
