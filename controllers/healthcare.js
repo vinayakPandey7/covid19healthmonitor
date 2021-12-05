@@ -26,7 +26,7 @@ exports.addPost = async (req,res) => {
 
 // Find a single Tutorial with an id
 exports.findAll = async (req,res) => {
-   console.log('m inside findall')
+   console.log('Fetching prev history record of patient from server')
    try {
      const healthData = await Userhealths.find();
 
@@ -48,11 +48,11 @@ exports.findAll = async (req,res) => {
 exports.findLatest = async (req,res) => {
    
    try {
-    let dumTemp = Math.floor((Math.random() * 100) + 1);
-    let dumspo2 = Math.floor((Math.random() * 100) + 1);
-    let dumbp = Math.floor((Math.random() * 100) + 1);
-    let dumtitle = 'dummyTitle';
-    let dumremark = 'dummyRemark';
+//     let dumTemp = Math.floor((Math.random() * 100) + 1);
+//     let dumspo2 = Math.floor((Math.random() * 100) + 1);
+//     let dumbp = Math.floor((Math.random() * 100) + 1);
+//     let dumtitle = 'dummyTitle';
+//     let dumremark = 'dummyRemark';
 
 //      const createDummyData = new Userhealths({temperature:dumTemp,bp:dumbp, spo2:dumspo2, title:dumtitle, remark:dumremark });
 //      const savedPost = await createDummyData.save();
@@ -67,7 +67,7 @@ exports.findLatest = async (req,res) => {
     //   chart2:{name:'spo2',xAxis:tempData.date ,data:tempData.date,healthy:tempData.healthy,title:tempData.title,remark:tempData.remark},
     //   chart3:{name:'bp',xAxis:tempData.date ,data:tempData.date,healthy:tempData.healthy,title:tempData.title,remark:tempData.remark}
     //  }
-    console.log('inside find-latest, data inserted and feteched successfuly')
+    console.log('Latest Patient data fetched successfuly')
     res.send({success:true,LatestData:healthData});
     //  tempData.map((item,index) => {
     //   healthData['chart1'].data.push(item.temperature);
@@ -102,7 +102,7 @@ exports.findLatest = async (req,res) => {
     //    healthData:healthData
     //  });
    } catch (e) {
-     console.group('errrr')
+     console.group('error occurred while fetching real time data from patient')
      res.status(400).json({ success: false,error: e.message });
    }
    
