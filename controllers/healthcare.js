@@ -68,7 +68,7 @@ exports.findLatest = async (req,res) => {
     //   chart3:{name:'bp',xAxis:tempData.date ,data:tempData.date,healthy:tempData.healthy,title:tempData.title,remark:tempData.remark}
     //  }
     console.log('inside find-latest, data inserted and feteched successfuly')
-    res.send({hell:true,dataSaved:savedPost,LatestData:healthData});
+    res.send({success:true,LatestData:healthData});
     //  tempData.map((item,index) => {
     //   healthData['chart1'].data.push(item.temperature);
     //   healthData['chart1'].xAxis.push(item.date);
