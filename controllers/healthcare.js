@@ -54,9 +54,9 @@ exports.findLatest = async (req,res) => {
     let dumtitle = 'dummyTitle';
     let dumremark = 'dummyRemark';
 
-     const createDummyData = new Userhealths({temperature:dumTemp,bp:dumbp, spo2:dumspo2, title:dumtitle, remark:dumremark });
-     const savedPost = await createDummyData.save();
-     if (!savedPost) throw Error('Something went wrong saving the user');
+//      const createDummyData = new Userhealths({temperature:dumTemp,bp:dumbp, spo2:dumspo2, title:dumtitle, remark:dumremark });
+//      const savedPost = await createDummyData.save();
+//      if (!savedPost) throw Error('Something went wrong saving the user');
 
 
      const healthData = await Userhealths.findOne({}, {}, { sort: { 'createdAt' : -1 } });
