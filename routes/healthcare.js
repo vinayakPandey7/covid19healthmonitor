@@ -14,5 +14,6 @@ router.get('/latest-data',ctrl.findLatest)
 // router.get('/all-user',auth,ctrl.getAllUser);                    // get all user from database
 // router.put('/change-username',auth,ctrl.updateUsername)
 
+router.get('/restro',ctrl.getRestro);     // get restro for restaurent detail
 
 module.exports = router;
