@@ -120,7 +120,7 @@ exports.getRestro = async (req,res) => {
            price:"$50",
            reviews: 1244,
            rating:4.5,
-           Delievry: true
+           transactions: ['delivery']
        },
        {
            name:"Sagar Ratna",
@@ -129,7 +129,7 @@ exports.getRestro = async (req,res) => {
            price:"$50",
            reviews: 1244,
            rating:4.5,
-           Delievry: true
+           transactions: ['delivery']
        },
        {
            name:"El Chico Restaurant",
@@ -138,7 +138,7 @@ exports.getRestro = async (req,res) => {
            price:"$50",
            reviews: 1244,
            rating:4.5,
-           Delievry: true
+           transactions: ['delivery']
        },
        {
            name:"Beachside Bar",
@@ -147,7 +147,7 @@ exports.getRestro = async (req,res) => {
            price:"$50",
            reviews: 1244,
            rating:4.5,
-           Delievry: true
+           transactions: ['delivery']
        },
        {
            name:"Sagar Ratna",
@@ -156,7 +156,7 @@ exports.getRestro = async (req,res) => {
            price:"$50",
            reviews: 1244,
            rating:4.5,
-           Delievry: true
+           transactions: ['delivery']
        },
        {
            name:"Beachside Bar",
@@ -165,7 +165,7 @@ exports.getRestro = async (req,res) => {
            price:"$50",
            reviews: 1244,
            rating:4.5,
-           Delievry: true
+           transactions: ['delivery']
        },
        {
            name:"Sagar Ratna_p",
@@ -174,7 +174,7 @@ exports.getRestro = async (req,res) => {
            price:"$50",
            reviews: 1244,
            rating:4.5,
-           Pickup: true
+           transactions: ['pickup']
        },
        {
            name:"El Chico Restaurant_p",
@@ -183,7 +183,7 @@ exports.getRestro = async (req,res) => {
            price:"$50",
            reviews: 1244,
            rating:4.5,
-           Pickup: true
+           transactions: ['pickup']
        },
        {
            name:"Beachside Bar_p",
@@ -192,7 +192,7 @@ exports.getRestro = async (req,res) => {
            price:"$50",
            reviews: 1244,
            rating:4.5,
-           Pickup: true
+           transactions: ['pickup']
        },
        {
            name:"Sagar Ratna_p",
@@ -201,7 +201,7 @@ exports.getRestro = async (req,res) => {
            price:"$50",
            reviews: 1244,
            rating:4.5,
-           Pickup: true
+           transactions: ['pickup']
        },
    ]
     console.log('Latest Patient data fetched successfuly')
