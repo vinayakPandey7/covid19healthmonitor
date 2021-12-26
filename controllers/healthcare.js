@@ -119,7 +119,8 @@ exports.getRestro = async (req,res) => {
            catagories: ["Cafe","Bar"],
            price:"$50",
            reviews: 1244,
-           rating:4.5
+           rating:4.5,
+           Delievry: true
        },
        {
            name:"Sagar Ratna",
@@ -127,7 +128,8 @@ exports.getRestro = async (req,res) => {
            catagories: ["Cafe"],
            price:"$50",
            reviews: 1244,
-           rating:4.5
+           rating:4.5,
+           Delievry: true
        },
        {
            name:"El Chico Restaurant",
@@ -135,7 +137,8 @@ exports.getRestro = async (req,res) => {
            catagories: ["Cafe","Bar"],
            price:"$50",
            reviews: 1244,
-           rating:4.5
+           rating:4.5,
+           Delievry: true
        },
        {
            name:"Beachside Bar",
@@ -143,7 +146,8 @@ exports.getRestro = async (req,res) => {
            catagories: ["Cafe","Bar"],
            price:"$50",
            reviews: 1244,
-           rating:4.5
+           rating:4.5,
+           Delievry: true
        },
        {
            name:"Sagar Ratna",
@@ -151,7 +155,53 @@ exports.getRestro = async (req,res) => {
            catagories: ["Cafe"],
            price:"$50",
            reviews: 1244,
-           rating:4.5
+           rating:4.5,
+           Delievry: true
+       },
+       {
+           name:"Beachside Bar",
+           image_url: "https://static.toiimg.com/thumb/51076300.cms?resizemode=75&width=1200&height=900",
+           catagories: ["Cafe","Bar"],
+           price:"$50",
+           reviews: 1244,
+           rating:4.5,
+           Delievry: true
+       },
+       {
+           name:"Sagar Ratna_p",
+           image_url: "https://b.zmtcdn.com/data/pictures/9/2400009/33d6b7973c6645f001a1e35390f5ea26.jpg",
+           catagories: ["Cafe"],
+           price:"$50",
+           reviews: 1244,
+           rating:4.5,
+           Pickup: true
+       },
+       {
+           name:"El Chico Restaurant_p",
+           image_url: "https://lh3.googleusercontent.com/uo6AQPFQcMWrNV7WlQaXk94CMbTXrHCv7PYFt-bvJx7xJo1ybTdKGAq_rCdOhw4dbs9G9nR5kZxg4CU6dmXTilxrbkM=w512",
+           catagories: ["Cafe","Bar"],
+           price:"$50",
+           reviews: 1244,
+           rating:4.5,
+           Pickup: true
+       },
+       {
+           name:"Beachside Bar_p",
+           image_url: "https://static.toiimg.com/thumb/51076300.cms?resizemode=75&width=1200&height=900",
+           catagories: ["Cafe","Bar"],
+           price:"$50",
+           reviews: 1244,
+           rating:4.5,
+           Pickup: true
+       },
+       {
+           name:"Sagar Ratna_p",
+           image_url: "https://b.zmtcdn.com/data/pictures/9/2400009/33d6b7973c6645f001a1e35390f5ea26.jpg",
+           catagories: ["Cafe"],
+           price:"$50",
+           reviews: 1244,
+           rating:4.5,
+           Pickup: true
        },
    ]
     console.log('Latest Patient data fetched successfuly')
