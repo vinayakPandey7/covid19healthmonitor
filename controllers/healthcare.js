@@ -109,7 +109,7 @@ exports.findLatest = async (req,res) => {
 }
 
 
-exports.findLatest = async (req,res) => {
+exports.getRestro = async (req,res) => {
    console.log("inside restro api")
    try {
       const localRestaurants =  [
