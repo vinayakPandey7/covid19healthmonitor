@@ -109,6 +109,61 @@ exports.findLatest = async (req,res) => {
 }
 
 
+exports.findLatest = async (req,res) => {
+   console.log("inside restro api")
+   try {
+      const localRestaurants =  [
+       {
+           name:"Beachside Bar",
+           image_url: "https://static.toiimg.com/thumb/51076300.cms?resizemode=75&width=1200&height=900",
+           catagories: ["Cafe","Bar"],
+           price:"$50",
+           reviews: 1244,
+           rating:4.5
+       },
+       {
+           name:"Sagar Ratna",
+           image_url: "https://b.zmtcdn.com/data/pictures/9/2400009/33d6b7973c6645f001a1e35390f5ea26.jpg",
+           catagories: ["Cafe"],
+           price:"$50",
+           reviews: 1244,
+           rating:4.5
+       },
+       {
+           name:"El Chico Restaurant",
+           image_url: "https://lh3.googleusercontent.com/uo6AQPFQcMWrNV7WlQaXk94CMbTXrHCv7PYFt-bvJx7xJo1ybTdKGAq_rCdOhw4dbs9G9nR5kZxg4CU6dmXTilxrbkM=w512",
+           catagories: ["Cafe","Bar"],
+           price:"$50",
+           reviews: 1244,
+           rating:4.5
+       },
+       {
+           name:"Beachside Bar",
+           image_url: "https://static.toiimg.com/thumb/51076300.cms?resizemode=75&width=1200&height=900",
+           catagories: ["Cafe","Bar"],
+           price:"$50",
+           reviews: 1244,
+           rating:4.5
+       },
+       {
+           name:"Sagar Ratna",
+           image_url: "https://b.zmtcdn.com/data/pictures/9/2400009/33d6b7973c6645f001a1e35390f5ea26.jpg",
+           catagories: ["Cafe"],
+           price:"$50",
+           reviews: 1244,
+           rating:4.5
+       },
+   ]
+    console.log('Latest Patient data fetched successfuly')
+    res.send({success:true,LatestData:localRestaurants});
+
+   } catch (e) {
+     console.group('error occurred while fetching real time data from patient')
+     res.status(400).json({ success: false,error: e.message });
+   }
+   
+}
+
 // Update a Tutorial by the id in the request
 exports.update = (req, res) => {
   
@@ -131,59 +186,64 @@ exports.findAllPublished = (req, res) => {
 
 
 // get api for restaurent react native project
-exports.getRestro = () =>{
-   try {
+// exports.getRestro = () =>{
+//    try {
    
-      const localRestaurants =  [
-    {
-        name:"Beachside Bar",
-        image_url: "https://static.toiimg.com/thumb/51076300.cms?resizemode=75&width=1200&height=900",
-        catagories: ["Cafe","Bar"],
-        price:"$50",
-        reviews: 1244,
-        rating:4.5
-    },
-    {
-        name:"Sagar Ratna",
-        image_url: "https://b.zmtcdn.com/data/pictures/9/2400009/33d6b7973c6645f001a1e35390f5ea26.jpg",
-        catagories: ["Cafe"],
-        price:"$50",
-        reviews: 1244,
-        rating:4.5
-    },
-    {
-        name:"El Chico Restaurant",
-        image_url: "https://lh3.googleusercontent.com/uo6AQPFQcMWrNV7WlQaXk94CMbTXrHCv7PYFt-bvJx7xJo1ybTdKGAq_rCdOhw4dbs9G9nR5kZxg4CU6dmXTilxrbkM=w512",
-        catagories: ["Cafe","Bar"],
-        price:"$50",
-        reviews: 1244,
-        rating:4.5
-    },
-    {
-        name:"Beachside Bar",
-        image_url: "https://static.toiimg.com/thumb/51076300.cms?resizemode=75&width=1200&height=900",
-        catagories: ["Cafe","Bar"],
-        price:"$50",
-        reviews: 1244,
-        rating:4.5
-    },
-    {
-        name:"Sagar Ratna",
-        image_url: "https://b.zmtcdn.com/data/pictures/9/2400009/33d6b7973c6645f001a1e35390f5ea26.jpg",
-        catagories: ["Cafe"],
-        price:"$50",
-        reviews: 1244,
-        rating:4.5
-    },
-]
+//       const localRestaurants =  [
+//     {
+//         name:"Beachside Bar",
+//         image_url: "https://static.toiimg.com/thumb/51076300.cms?resizemode=75&width=1200&height=900",
+//         catagories: ["Cafe","Bar"],
+//         price:"$50",
+//         reviews: 1244,
+//         rating:4.5
+//     },
+//     {
+//         name:"Sagar Ratna",
+//         image_url: "https://b.zmtcdn.com/data/pictures/9/2400009/33d6b7973c6645f001a1e35390f5ea26.jpg",
+//         catagories: ["Cafe"],
+//         price:"$50",
+//         reviews: 1244,
+//         rating:4.5
+//     },
+//     {
+//         name:"El Chico Restaurant",
+//         image_url: "https://lh3.googleusercontent.com/uo6AQPFQcMWrNV7WlQaXk94CMbTXrHCv7PYFt-bvJx7xJo1ybTdKGAq_rCdOhw4dbs9G9nR5kZxg4CU6dmXTilxrbkM=w512",
+//         catagories: ["Cafe","Bar"],
+//         price:"$50",
+//         reviews: 1244,
+//         rating:4.5
+//     },
+//     {
+//         name:"Beachside Bar",
+//         image_url: "https://static.toiimg.com/thumb/51076300.cms?resizemode=75&width=1200&height=900",
+//         catagories: ["Cafe","Bar"],
+//         price:"$50",
+//         reviews: 1244,
+//         rating:4.5
+//     },
+//     {
+//         name:"Sagar Ratna",
+//         image_url: "https://b.zmtcdn.com/data/pictures/9/2400009/33d6b7973c6645f001a1e35390f5ea26.jpg",
+//         catagories: ["Cafe"],
+//         price:"$50",
+//         reviews: 1244,
+//         rating:4.5
+//     },
+// ]
    
-     res.status(200).json({
-       success: true,
-       localRestaurants:localRestaurants
-     });
+//      res.status(200).json({
+//        success: true,
+//        localRestaurants:localRestaurants
+//      });
 
-   } catch (e) {
-     console.group('errrr')
-     res.status(400).json({ success: false,error: e.message });
-   }
-}
+//    } catch (e) {
+//      console.group('errrr')
+//      res.status(400).json({ success: false,error: e.message });
+//    }
+// }
+
+
+// getRestro
+
+
