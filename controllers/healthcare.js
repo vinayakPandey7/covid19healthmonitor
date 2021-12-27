@@ -157,8 +157,7 @@ exports.getRestro = async (req,res) => {
                  description: "Packed with plenty of spice, this plant-based chickpea curry has less than 200 calories.",
                  price: "",
                  image: "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/OLI-EasterIssue2019-Everyday_ChannaMasala_31526-bc1e5ad.jpg?webp=true&quality=90&resize=620%2C413"
-             },
-             ,{
+             },{
                  title: "Mutter paneer",
                  description: "The texture of fresh peas stands up well against the paneer, but frozen is fine too.",
                  price: "",
@@ -230,8 +229,7 @@ exports.getRestro = async (req,res) => {
                  description: "Packed with plenty of spice, this plant-based chickpea curry has less than 200 calories.",
                  price: "",
                  image: "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/OLI-EasterIssue2019-Everyday_ChannaMasala_31526-bc1e5ad.jpg?webp=true&quality=90&resize=620%2C413"
-             },
-             ,{
+             },{
                  title: "Mutter paneer",
                  description: "The texture of fresh peas stands up well against the paneer, but frozen is fine too.",
                  price: "",
@@ -303,8 +301,7 @@ exports.getRestro = async (req,res) => {
                  description: "Packed with plenty of spice, this plant-based chickpea curry has less than 200 calories.",
                  price: "",
                  image: "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/OLI-EasterIssue2019-Everyday_ChannaMasala_31526-bc1e5ad.jpg?webp=true&quality=90&resize=620%2C413"
-             },
-             ,{
+             },{
                  title: "Mutter paneer",
                  description: "The texture of fresh peas stands up well against the paneer, but frozen is fine too.",
                  price: "",
@@ -376,8 +373,7 @@ exports.getRestro = async (req,res) => {
                  description: "Packed with plenty of spice, this plant-based chickpea curry has less than 200 calories.",
                  price: "",
                  image: "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/OLI-EasterIssue2019-Everyday_ChannaMasala_31526-bc1e5ad.jpg?webp=true&quality=90&resize=620%2C413"
-             },
-             ,{
+             },{
                  title: "Mutter paneer",
                  description: "The texture of fresh peas stands up well against the paneer, but frozen is fine too.",
                  price: "",
@@ -449,8 +445,7 @@ exports.getRestro = async (req,res) => {
                  description: "Packed with plenty of spice, this plant-based chickpea curry has less than 200 calories.",
                  price: "",
                  image: "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/OLI-EasterIssue2019-Everyday_ChannaMasala_31526-bc1e5ad.jpg?webp=true&quality=90&resize=620%2C413"
-             },
-             ,{
+             },{
                  title: "Mutter paneer",
                  description: "The texture of fresh peas stands up well against the paneer, but frozen is fine too.",
                  price: "",
@@ -522,8 +517,7 @@ exports.getRestro = async (req,res) => {
                  description: "Packed with plenty of spice, this plant-based chickpea curry has less than 200 calories.",
                  price: "",
                  image: "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/OLI-EasterIssue2019-Everyday_ChannaMasala_31526-bc1e5ad.jpg?webp=true&quality=90&resize=620%2C413"
-             },
-             ,{
+             },{
                  title: "Mutter paneer",
                  description: "The texture of fresh peas stands up well against the paneer, but frozen is fine too.",
                  price: "",
@@ -595,8 +589,7 @@ exports.getRestro = async (req,res) => {
                  description: "Packed with plenty of spice, this plant-based chickpea curry has less than 200 calories.",
                  price: "",
                  image: "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/OLI-EasterIssue2019-Everyday_ChannaMasala_31526-bc1e5ad.jpg?webp=true&quality=90&resize=620%2C413"
-             },
-             ,{
+             },{
                  title: "Mutter paneer",
                  description: "The texture of fresh peas stands up well against the paneer, but frozen is fine too.",
                  price: "",
@@ -668,8 +661,7 @@ exports.getRestro = async (req,res) => {
                  description: "Packed with plenty of spice, this plant-based chickpea curry has less than 200 calories.",
                  price: "",
                  image: "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/OLI-EasterIssue2019-Everyday_ChannaMasala_31526-bc1e5ad.jpg?webp=true&quality=90&resize=620%2C413"
-             },
-             ,{
+             },{
                  title: "Mutter paneer",
                  description: "The texture of fresh peas stands up well against the paneer, but frozen is fine too.",
                  price: "",
@@ -741,8 +733,7 @@ exports.getRestro = async (req,res) => {
                  description: "Packed with plenty of spice, this plant-based chickpea curry has less than 200 calories.",
                  price: "",
                  image: "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/OLI-EasterIssue2019-Everyday_ChannaMasala_31526-bc1e5ad.jpg?webp=true&quality=90&resize=620%2C413"
-             },
-             ,{
+             },{
                  title: "Mutter paneer",
                  description: "The texture of fresh peas stands up well against the paneer, but frozen is fine too.",
                  price: "",
@@ -814,8 +805,7 @@ exports.getRestro = async (req,res) => {
                  description: "Packed with plenty of spice, this plant-based chickpea curry has less than 200 calories.",
                  price: "",
                  image: "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/OLI-EasterIssue2019-Everyday_ChannaMasala_31526-bc1e5ad.jpg?webp=true&quality=90&resize=620%2C413"
-             },
-             ,{
+             },{
                  title: "Mutter paneer",
                  description: "The texture of fresh peas stands up well against the paneer, but frozen is fine too.",
                  price: "",
