@@ -19,8 +19,14 @@ app.use(express.json())
 // const PORT = process.env.PORT || 8080; 
 
 
-var corsOptions = {origin: "http://http://192.168.29.143:8080"};
-
+// var corsOptions = {origin: "http://http://192.168.29.143:8080"};
+// app.use(cors());
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-origin", "*")
+  res.setHeader('Access-Control-Allow-Methods', "GET,POST,OPTIONS")
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+  next();
+})
 
 
 const db = require("./models");
@@ -41,7 +47,7 @@ db.mongoose
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
-app.use(cors());
+
 
 
 // parse requests of content-type - application/x-www-form-urlencoded
@@ -57,12 +63,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.get("/", (req, res) => {
 //   res.json({ message: "sucess:true" });
 // })
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-origin", "*")
-  res.setHeader('Access-Control-Allow-Methods', "GET,POST,OPTIONS")
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
-  next();
-})
+
 app.use('/api/auth', authRoutes);
 app.use('/api/data/',healthcareRoute);
 
